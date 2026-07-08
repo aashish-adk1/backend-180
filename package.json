@@ -1,0 +1,29 @@
+{
+  "name": "backend-180",
+  "version": "1.0.0",
+  "description": "This is my read me file where i will be tracking my backend journey, from now on i am moing from frontend to backend for whole 180 days without brakes. Wish me luck :)\r HAHAHAHAHAHAHHAHAHAHAHAHAHA\r 😊😊😊😊😊",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aashish-adk1/backend-180.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/aashish-adk1/backend-180/issues"
+  },
+  "homepage": "https://github.com/aashish-adk1/backend-180#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
