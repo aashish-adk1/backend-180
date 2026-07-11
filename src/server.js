@@ -1,26 +1,15 @@
-import dotenv from "dotenv";
-dotenv.config();
+import dotenv from "dotenv/config";
 
+import { connectDB } from "./config/db.js";
 import app from "./app.js";
 
 const PORT = process.env.PORT || 3000;
+const NODE_ENV = process.env.NODE_ENV || "development";
 
-
-app.get("/", (req, res) => {
-  res.send("Backend 180 is running...");
-});
-
-app.get("/about", (req, res) => {
-  res.send("Learning Backend Day 2");
-});
-
-app.get("/contact", (req, res) => {
-  res.json({
-    "name":"Ashish",
-    "goal":"Backend Engineer"
-  });
-});
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+connectDB()
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`🚀 Server is running on port ${PORT}`);
+      console.log(`Environment: ${NODE_ENV}`);
+    });
+  })
